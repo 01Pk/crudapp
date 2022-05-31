@@ -1,0 +1,23 @@
+<h1>Show Employee</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">City</th>
+      <th scope="col">Phone Number</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#each list}}
+    <tr class="table-active">
+      <th scope="row">{{this.fullName}}</th>
+      <th scope="row">{{this.email}}</th>
+    <th scope="row">{{this.city}}</th>
+    <th scope="row">{{this.mobile}}</th>
+    <th scope="row"> <a href="/updateEmp/{{this._id}}" class="btn btn-info">Update</a></th>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
